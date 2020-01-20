@@ -1,0 +1,419 @@
+﻿/*login*/
+
+html, body {
+    direction: rtl;
+    font-family: 'Assistant', Arial, sans-serif;
+    background: #e4e4e4;
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1rem;
+    line-height: 1.4rem;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+    body.main_login.login_form::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.35;
+        background-image: url('../images/bar.jpg');
+        
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+    }
+
+    body.main_login {
+        background-color: #464e53;
+        text-align: center;
+    }
+
+        body.main_login.login_form > section {
+            max-width: 720px;
+            padding: 3rem;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        body.main_login > section {
+            margin: 4rem auto 2rem auto;
+            background-color: #ffffff;
+            border-radius: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            max-width: 1024px;
+            min-height: 320px;
+        }
+
+::-webkit-scrollbar {
+    width: 6px;
+    -webkit-appearance: none;
+}
+
+    ::-webkit-scrollbar:horizontal {
+        height: 6px;
+        -webkit-appearance: none;
+    }
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+    ::-webkit-scrollbar-track:horizontal {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+    }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #ececec;
+    -webkit-box-shadow: inset 0 0 6px black;
+}
+
+    ::-webkit-scrollbar-thumb:horizontal {
+        border-radius: 12px;
+        background: #ececec;
+        -webkit-box-shadow: inset 0 0 6px black;
+    }
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #166678!important;
+    box-shadow: 0 1px 0 0 #166678!important;
+}
+
+    input:not([type]):focus:not([readonly]) + label,
+    input[type=text]:focus:not([readonly]) + label,
+    input[type=password]:focus:not([readonly]) + label,
+    input[type=email]:focus:not([readonly]) + label,
+    input[type=url]:focus:not([readonly]) + label,
+    input[type=time]:focus:not([readonly]) + label,
+    input[type=date]:focus:not([readonly]) + label,
+    input[type=datetime]:focus:not([readonly]) + label,
+    input[type=datetime-local]:focus:not([readonly]) + label,
+    input[type=tel]:focus:not([readonly]) + label,
+    input[type=number]:focus:not([readonly]) + label,
+    input[type=search]:focus:not([readonly]) + label,
+    textarea.materialize-textarea:focus:not([readonly]) + label {
+        color: #000 !important;
+
+    }
+
+.login_form_title {
+    font-family: 'Assistant',Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    border: none;
+    line-height: 1;
+}
+
+fieldset {
+    border: 0;
+    text-align: right;
+}
+
+.login_form_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style: none;
+    margin: -3rem;
+}
+
+span.helper-text {
+    float: left;
+    font-size: 0.8rem !important;
+}
+
+.input_no_margin {
+    margin: 0 0 5px 0 !important;
+}
+
+.login_submit_btn {
+    text-align: center;
+}
+
+    .login_submit_btn a {
+        background-color: #166678;
+        font-size: 1.2rem;
+        width: 50%;
+    }
+
+        .login_submit_btn a:hover {
+            background-color: #166678;
+            opacity: 0.5;
+        }
+
+.forgot_password_btn {
+    color: #e21372;
+    /*text-decoration:underline;*/
+    text-align: center;
+}
+
+    .forgot_password_btn span {
+        color: #000;
+        /*text-decoration:underline;*/
+    }
+
+    .forgot_password_btn:hover {
+        color: #888;
+    }
+
+footer div.login_logo {
+    background: url(../images/smart_match_logo_white.svg) no-repeat center;
+    background-size: contain;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: center;
+    width: 3.5rem;
+    height: 2.9rem;
+    line-height: 3rem;
+    border: none;
+    border-radius: 0;
+}
+
+div.logo_text {
+    text-align: right;
+    display: inline-block;
+}
+
+.system_name_text {
+    color: #fff;
+    font-family: Assistant, Arial, sans-serif;
+    font-size: 2.25rem;
+    display: block;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.system_slogan_text {
+    color: #fff;
+    font-family: Assistant, Arial, sans-serif;
+    font-size: 1rem;
+    display: block;
+    margin: 0;
+    line-height: 1;
+}
+
+body.main_login footer {
+    position: relative;
+    z-index: 2;
+}
+
+    body.main_login footer a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+.input-field > label:not(.label-icon).active {
+    font-size: .8rem;
+    transform: translateY(-100%);
+}
+
+.input-field > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label {
+    font-size: .8rem;
+    transform: translateY(-100%);
+}
+
+#modalLogin {
+    width: 350px;
+}
+
+    #modalLogin .modal-footer {
+        text-align: center;
+    }
+
+.my_agree_btn {
+    color: #fff;
+    width: initial !important;
+}
+
+#changePassword_fieldset, #changeUserName_fieldset, #recoverUserName_fieldset, #recoverPassword_fieldset {
+    display: none;
+}
+.capslock {
+    text-align: center !important;
+    color: #166678!important;
+    height: 22px;
+}
+
+.input-field > label {
+    right: 0;
+}
+
+#toast-container {
+    left: 7%;
+    top: auto;
+    right: auto;
+    bottom: 5%;
+    width: 100%;
+}
+
+.error_toast {
+    background-color: #cc4c4a;
+}
+
+.confirm_toast {
+    background-color: #007a6e;
+}
+
+.neutral_toast {
+    background-color: #3c596b;
+}
+
+.toast .toast-action {
+    color: #fff;
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+.password-row {
+    width: 100%;
+    display: inline-flex;
+}
+
+    .password-row .input-field {
+        width: 100%;
+    }
+
+    .password-row a {
+        margin: 15px 0;
+    }
+
+.hide-icon {
+    display: none;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.70);
+}
+.reset_div{
+    text-align:center;
+
+}
+    .reset_div a {
+        text-decoration-line: underline;
+        color: #000;
+        cursor: pointer;
+        margin: 5px;
+    }
+#recoverPassword_fieldset .login_submit_btn a, #recoverUserName_fieldset .login_submit_btn a {
+    width: 49%;
+}
+.row .col {
+    float: right;
+}
+span{
+    text-align:right;
+}
+ul:not(.browser-default){
+    padding-right:0;
+}
+.select-wrapper .caret {
+    left: 0 !important;
+    right: auto !important;
+}
+#login_fieldset{
+    text-align: center;
+}
+#login_logo {
+    height: 100px;
+}
+.row .col.s4{
+    padding-right:0;
+}
+/*update*/
+
+/*loader*/
+#screen_loader {
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    position: fixed;
+    background: #354b5d99;
+    direction: ltr;
+}
+
+#screen_loader_inner {
+    top: calc(50% - 70px);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.preloader-wrapper {
+    height: 100px;
+    width: 100px;
+}
+
+.spinner-layer {
+    border-color: #166678;
+}
+
+.circle-clipper .circle {
+    border-width: 6px;
+}
+
+.loader_text {
+    color: #fff;
+    direction: rtl;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+#contact-title {
+    font-size: 24px;
+    color: #166678;
+}
+#client_content {
+    height: 200px;
+}
+ textarea, #contact-div input {
+    background-color: #f5f5f5 !important;
+    border-bottom: none !important;
+    margin: 8px 0 !important;
+    
+}
+#contact-div label{
+    right: 0.9rem;
+}
+#contact-div .row{
+    margin-bottom:0
+}
+.center-btn{
+    text-align:center;
+}

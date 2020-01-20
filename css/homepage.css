@@ -1,0 +1,76 @@
+﻿main {
+    height: calc(100% - 100px);
+}
+    .main.card{
+        height:100%;
+        overflow-y:auto
+    }
+p {
+    margin: 10px;
+}
+.main_title {
+    font-size: 24px;
+    color: #474e53;
+    padding: 10px;
+    height: 70px;
+}
+
+#recomendBars {
+    height: 70%;
+}
+
+.criterion_information .s3 {
+    float: right;
+   
+}
+    .criterion_information .s3 span {
+        cursor:default;
+    }
+
+#address .criterion_information {
+    color: #9e9e9e;
+}
+
+.details {
+    border: 3px solid #166678;
+    padding:40px;
+}
+.criterion_title {
+    border-bottom: 1px solid #166678;
+}
+/*----------carousel---------------*/
+
+.carousel {
+    height: calc(100% - 70px);
+}
+.carousel .carousel-item {
+    width: 500px;
+    height: 350px;
+    padding: 0;
+    opacity:1 !important;
+}
+.card-image {
+    height: 100%;
+}
+.card .card-image img {
+    height: 100%;
+}
+
+.card .card-image .card-title {
+    right: 0;
+    font-size: 24px;
+    color: #166678;
+    background-color: white;
+}
+/*update*/
+.challenge-img{
+    height:100px;
+}
+#score-div {
+    width: max-content;
+    border: 3px solid #166678;
+    padding: 10px;
+}
+#status-div {
+    height: 60px;
+}
